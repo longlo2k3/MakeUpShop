@@ -1,6 +1,6 @@
 import Logolink from "./Logolink/Logolink";
-import CartIcon from "../Icons/CartIcon";
-import HeartIcon from "../Icons/HeartIcon";
+import CartIconNavBar from "../Icons/CartIconNavBar";
+import HeartIconNavBar from "../Icons/HeartIconNavBar";
 import NavLink from "../Navlink/NavLinks";
 import { motion } from "framer-motion";
 
@@ -26,10 +26,10 @@ export default function Navbar() {
       </div>
       <div className="w-fit text-xl  flex flex-row justify-center items-center md:gap-10 gap-5">
         <div className={styles}>
-          <HeartIcon />
+          <HeartIconNavBar />
         </div>
         <div className={styles}>
-          <CartIcon />
+          <CartIconNavBar />
         </div>
       </div>
     </motion.nav>

@@ -1,36 +1,36 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-
 import { PRODUCT_TAGS } from "../constants/tags";
-import { BRANDS } from "../constants/brands";
+
 const BASE_URL = "http://makeup-api.herokuapp.com/api/v1/products";
 
 const getRandomProductTag = () => {
-  const randomTag = Math.floor(Math.random() * BRANDS.length);
-  return BRANDS[randomTag];
+  return PRODUCT_TAGS[Math.floor(Math.random() * PRODUCT_TAGS.length)];
 };
 
-const useGetTopProducts = () => {
+const useGetRecommendProduct = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     const source = axios.CancelToken.source();
     axios
       .get(`${BASE_URL}.json`, {
         params: {
-          brand: getRandomProductTag(),
+          product_tags: getRandomProductTag(),
           cancelToken: source.token,
         },
       })
       .then((response) => {
-        setProducts(response.data.slice(0, 8));
+        setProducts(response.data.slice(0, 4));
+      })
+      .catch((error) => {
+        console.error("Loại khi lấy dữ liệu sản phẩm:", error);
       });
 
     return () => {
       source.cancel();
     };
   }, []);
-
   return products;
 };
 
-export default useGetTopProducts;
+export default useGetRecommendProduct;

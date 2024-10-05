@@ -21,14 +21,14 @@ const ProductCard = ({ id, name, brand, imgUrl, price }) => {
     >
       <Link
         className="flex flex-col align-center justify-center rounded-md mb-6 xl:mr-6 mr-2
-        px-4 py-6 transform hover:scale-105 hover:shadow-sm transition delay-50 duration-300 ease-in-out"
+        px-4 py-6 transform hover:scale-105 hover:shadow-sm transition delay-50 duration-300 ease-in-out "
         to={`/product/${id}`}
       >
         <div className="flex flex-1 flex-col justify-center mb-4">
           <img
             src={imgUrl}
             alt={name}
-            className="mx-auto w-[250px] "
+            className="mx-auto w-[250px] h-[350px] object-center object-contain"
             loading="lazy"
           />
         </div>

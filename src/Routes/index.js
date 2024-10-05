@@ -1,7 +1,9 @@
 import Home from "../Pages/Home";
 import About from "../Pages/About";
 import Products from "../Pages/Products";
-import Search from "../Pages/Search";
+import ProductPreview from "../Pages/ProductPreview";
+import Cart from "../Pages/Cart";
+import Wishlist from "../Pages/Wishlist";
 
 const publicRoutes = [
   {
@@ -13,12 +15,20 @@ const publicRoutes = [
     component: About,
   },
   {
-    path: "/products/:id",
+    path: "/product/:id",
+    component: ProductPreview,
+  },
+  {
+    path: "/products",
     component: Products,
   },
   {
-    path: "/search",
-    component: Search,
+    path: "/cart",
+    component: Cart,
+  },
+  {
+    path: "/wishlist",
+    component: Wishlist,
   },
 ];
 

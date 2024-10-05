@@ -40,6 +40,6 @@ export default function CartIcon({ id, isIcon }) {
 }
 
 CartIcon.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   isIcon: PropTypes.bool.isRequired,
 };

@@ -1,10 +1,11 @@
 import Title from "./Title";
 import Image from "./Image";
 import Info from "./Info";
-import Price from "./Price";
+import Price from "../Price";
 import Description from "./Description";
-import CartButton from "../Cart/CartButton";
+import CartButton from "../CartButton";
 import PropTypes from "prop-types";
+import CartIcon from "../Icons/CartIcon";
 
 const Product = ({ name, img, type, category, price, description }) => (
   <>

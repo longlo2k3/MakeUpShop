@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import bannerImg from "./img.jpg";
 
 const UniqueSellingPoint = () => (
-  <div className="bg-light-grey pt-20 mb-20">
-    <div className="container mx-auto pt-20 pb-16 flex flex-col md:flex-row items-center">
+  <div className="bg-light-grey pt-20 mb-20 overflow-hidden">
+    <div className="container mx-auto pt-20 pb-16 flex flex-col md:flex-row items-center ">
       <motion.div
         className="mr-0 md:mr-4 mb-4 md:mb-0"
         initial={{ opacity: 0, x: -100 }}
