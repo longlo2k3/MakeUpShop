@@ -2,10 +2,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { publicRoutes } from "./Routes";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
+import { SeviceContext } from "./Components/SeviceContext/SeviceContext";
 
 function App() {
   return (
-    <>
+    <SeviceContext>
       <Router>
         <div>
           <Navbar />
@@ -21,7 +22,7 @@ function App() {
           <Footer />
         </div>
       </Router>
-    </>
+    </SeviceContext>
   );
 }
 

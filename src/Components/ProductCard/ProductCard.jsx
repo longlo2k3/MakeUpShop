@@ -42,7 +42,13 @@ const ProductCard = ({ id, name, brand, imgUrl, price }) => {
         </div>
       </Link>
       <div className="absolute top-[77%] right-[15%] text-2xl text-gray-300">
-        <CartIcon id={id} isIcon={true} />
+        <CartIcon
+          id={id}
+          isIcon={true}
+          onClick={() => {
+            console.log("hello");
+          }}
+        />
       </div>
       <div className="absolute top-0 text-lg text-gray-300">
         <HeartIcon id={id} isIcon={true} />

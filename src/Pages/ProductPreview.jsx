@@ -18,7 +18,7 @@ const ProductPreview = () => {
           <div className="container m-auto lg:padding-primary py-20">
             <Product
               name={product.name}
-              img={product.image_link}
+              img={product.api_featured_image}
               type={
                 product.product_type.charAt(0).toUpperCase() +
                 product.product_type.slice(1)

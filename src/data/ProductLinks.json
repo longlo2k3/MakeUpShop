@@ -1,0 +1,52 @@
+[
+  {
+    "title": "skin",
+    "links": [
+      {
+        "name": "foundation"
+      },
+      {
+        "name": "blush"
+      },
+      {
+        "name": "bronzer"
+      }
+    ]
+  },
+  {
+    "title": "eyes",
+    "links": [
+      {
+        "name": "eyebrow"
+      },
+      {
+        "name": "eyeliner"
+      },
+      {
+        "name": "eyeshadow"
+      },
+      {
+        "name": "mascara"
+      }
+    ]
+  },
+  {
+    "title": "lips",
+    "links": [
+      {
+        "name": "lipstick"
+      },
+      {
+        "name": "lip liner"
+      }
+    ]
+  },
+  {
+    "title": "nails",
+    "links": [
+      {
+        "name": "nail polish"
+      }
+    ]
+  }
+]
