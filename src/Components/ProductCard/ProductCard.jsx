@@ -3,8 +3,20 @@ import CartIcon from "../Icons/CartIcon";
 import HeartIcon from "../Icons/HeartIcon";
 import Price from "../Price";
 import { motion } from "framer-motion";
+import { useContext, useState } from "react";
+import { SvContext } from "../SeviceContext/SeviceContext";
 
 const ProductCard = ({ id, name, brand, imgUrl, price }) => {
+  const { Cart, setCart, wishlist, setWishlist } = useContext(SvContext);
+
+  const addToCart = () => {
+    setCart([...Cart, { id, name, brand, imgUrl, price }]);
+  };
+
+  const addToWishlist = () => {
+    setWishlist([...wishlist, { id, name, brand, imgUrl, price }]);
+  };
+
   return (
     <motion.div
       className="relative flex flex-col gap-2 pb-10"
@@ -41,16 +53,16 @@ const ProductCard = ({ id, name, brand, imgUrl, price }) => {
           <Price price={price} />
         </div>
       </Link>
-      <div className="absolute top-[77%] right-[15%] text-2xl text-gray-300">
-        <CartIcon
-          id={id}
-          isIcon={true}
-          onClick={() => {
-            console.log("hello");
-          }}
-        />
+      <div
+        onClick={addToCart}
+        className="absolute top-[77%] right-[15%] text-2xl text-gray-300"
+      >
+        <CartIcon id={id} isIcon={true} />
       </div>
-      <div className="absolute top-0 text-lg text-gray-300">
+      <div
+        className="absolute top-0 text-lg text-gray-300"
+        onClick={addToWishlist}
+      >
         <HeartIcon id={id} isIcon={true} />
       </div>
     </motion.div>

@@ -3,10 +3,13 @@ import CartIconNavBar from "../Icons/CartIconNavBar";
 import HeartIconNavBar from "../Icons/HeartIconNavBar";
 import NavLink from "../Navlink/NavLinks";
 import { motion } from "framer-motion";
+import { SvContext } from "../SeviceContext/SeviceContext";
+import { useContext } from "react";
 
 export default function Navbar() {
+  const { Cart, wishlist } = useContext(SvContext);
   const styles =
-    "w-fit rounded-full bg-yellow hover:cursor-pointer hover:text-yellow hover:bg-dark hover:scale-125";
+    "relative w-fit rounded-full bg-yellow hover:cursor-pointer hover:text-yellow hover:bg-dark hover:scale-125";
   return (
     <motion.nav
       className="container mx-auto xl:padding-primary flex flex-row justify-between items-center py-5"
@@ -27,9 +30,15 @@ export default function Navbar() {
       <div className="w-fit text-xl  flex flex-row justify-center items-center md:gap-10 gap-5">
         <div className={styles}>
           <HeartIconNavBar />
+          <div className="font-krona absolute left-full bottom-[90%] text-sm text-white bg-red-500 rounded-full w-4 h-4 flex justify-center items-center">
+            {wishlist.length}
+          </div>
         </div>
         <div className={styles}>
-          <CartIconNavBar />
+          <CartIconNavBar></CartIconNavBar>
+          <div className="font-krona absolute left-full bottom-[90%] text-sm text-white bg-red-500 rounded-full w-4 h-4 flex justify-center items-center">
+            {Cart.length}
+          </div>
         </div>
       </div>
     </motion.nav>

@@ -16,7 +16,7 @@ const useSortProduct = () => {
   }, [number]);
 
   useEffect(() => {
-    let filtered = [...products];
+    let filtered = [...filteredProducts];
     if (sort === "Low to High") {
       filtered.sort((a, b) => a.price - b.price);
     } else {

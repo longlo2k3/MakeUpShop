@@ -10,6 +10,9 @@ export const SeviceContext = ({ children }) => {
   const [brand, setBrand] = useState("All");
   const [number, setNumber] = useState(9);
   const [sort, setSort] = useState("Low to High");
+  const [Cart, setCart] = useState([]);
+  const [wishlist, setWishlist] = useState([]);
+  const [count, setCount] = useState(1);
   return (
     <SvContext.Provider
       value={{
@@ -19,12 +22,18 @@ export const SeviceContext = ({ children }) => {
         brand,
         number,
         sort,
+        Cart,
+        wishlist,
+        count,
         setMinPrice,
         setMaxPrice,
         setCategory,
         setBrand,
         setNumber,
         setSort,
+        setCart,
+        setWishlist,
+        setCount,
       }}
     >
       {children}

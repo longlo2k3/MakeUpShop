@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-export default function ButtonLink({ path, text, isActive }) {
+export default function ButtonLink({ path, text, isActive, isWhite }) {
   return (
     <motion.div
       initial={{ opacity: 0, x: 100 }}

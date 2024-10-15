@@ -8,21 +8,21 @@ export default function CartIcon({ id, isIcon }) {
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
-    setClicked((prevState) => !prevState);
+    setClicked(true);
+    alertBox.innerHTML = "Added to cart successfully!";
+    document.body.appendChild(alertBox);
+    setTimeout(() => {
+      document.body.removeChild(alertBox);
+    }, 1000);
   };
 
-  useEffect(() => {
-    if (clicked) {
-      alertBox.innerHTML = "Added to cart successfully!";
-      document.body.appendChild(alertBox);
-      const timer = setTimeout(() => {
-        document.body.removeChild(alertBox);
-      }, 1000);
-      return () => {
-        clearTimeout(timer);
-      };
-    }
-  }, [clicked]);
+  // useEffect(() => {
+  //   if (clicked) {
+  //     return () => {
+  //       clearTimeout(timer);
+  //     };
+  //   }
+  // }, [clicked]);
 
   return (
     <>
