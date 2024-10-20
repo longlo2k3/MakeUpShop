@@ -12,7 +12,8 @@ export const SeviceContext = ({ children }) => {
   const [sort, setSort] = useState("Low to High");
   const [Cart, setCart] = useState([]);
   const [wishlist, setWishlist] = useState([]);
-  const [count, setCount] = useState(1);
+  const [upload, setUpload] = useState(false);
+  const [uploadPayment, setUploadPayment] = useState(false);
   return (
     <SvContext.Provider
       value={{
@@ -24,7 +25,10 @@ export const SeviceContext = ({ children }) => {
         sort,
         Cart,
         wishlist,
-        count,
+        upload,
+        uploadPayment,
+        setUploadPayment,
+        setUpload,
         setMinPrice,
         setMaxPrice,
         setCategory,
@@ -33,7 +37,6 @@ export const SeviceContext = ({ children }) => {
         setSort,
         setCart,
         setWishlist,
-        setCount,
       }}
     >
       {children}

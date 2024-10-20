@@ -36,7 +36,7 @@ const ExtraBanner = ({ title }) => {
               </p>
             </div>
           </Link>
-          <ButtonLink text="Check out" isActive={true} />
+          <ButtonLink text="Check out" isActive={true} path={"/payment"} />
         </div>
       </div>
     </div>

@@ -4,6 +4,7 @@ import Products from "../Pages/Products";
 import ProductPreview from "../Pages/ProductPreview";
 import Cart from "../Pages/Cart";
 import Wishlist from "../Pages/Wishlist";
+import Payment from "../Pages/Payment";
 
 const publicRoutes = [
   {
@@ -29,6 +30,10 @@ const publicRoutes = [
   {
     path: "/wishlist",
     component: Wishlist,
+  },
+  {
+    path: "/payment",
+    component: Payment,
   },
 ];
 

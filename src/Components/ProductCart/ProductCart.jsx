@@ -33,7 +33,7 @@ const ProductCart = ({ id, name, brand, imgUrl, price }) => {
   };
 
   return count > 0 ? (
-    <div className="flex flex-row justify-between items-center">
+    <div className="flex flex-row justify-between items-center mt-2">
       <Link
         to={`/product/${id}`}
         className="flex flex-row justify-between items-center gap-2"

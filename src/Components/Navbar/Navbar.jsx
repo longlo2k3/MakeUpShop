@@ -5,8 +5,18 @@ import NavLink from "../Navlink/NavLinks";
 import { motion } from "framer-motion";
 import { SvContext } from "../SeviceContext/SeviceContext";
 import { useContext } from "react";
+import { FaUserCircle } from "react-icons/fa";
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+  useAuth,
+} from "@clerk/clerk-react";
+import { Button } from "@mui/material";
 
 export default function Navbar() {
+  const { isSignedIn } = useAuth();
   const { Cart, wishlist } = useContext(SvContext);
   const styles =
     "relative w-fit rounded-full bg-yellow hover:cursor-pointer hover:text-yellow hover:bg-dark hover:scale-125";
@@ -39,6 +49,16 @@ export default function Navbar() {
           <div className="font-krona absolute left-full bottom-[90%] text-sm text-white bg-red-500 rounded-full w-4 h-4 flex justify-center items-center">
             {Cart.length}
           </div>
+        </div>
+        <div>
+          {!isSignedIn && (
+            <SignInButton mode="modal">
+              <div className="text-xl hover:cursor-pointer transition-all duration-[0.4s] hover:scale-125">
+                <FaUserCircle />
+              </div>
+            </SignInButton>
+          )}
+          {isSignedIn && <UserButton />}
         </div>
       </div>
     </motion.nav>

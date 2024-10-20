@@ -9,13 +9,13 @@ const ThirdBanner = () => {
       <div>
         <div className="mb-6">
           <span>
-            <TitleBanner width="50px" text="Be natural," />
+            <TitleBanner width="100px" text="Be natural," />
           </span>
           <span>
-            <TitleBanner width="50px" text="be beautiful," />
+            <TitleBanner width="100px" text="be beautiful," />
           </span>
           <span className="">
-            <TitleBanner width="50px" text="be you" />
+            <TitleBanner width="100px" text="be you" />
           </span>
         </div>
         <ButtonLink path="/about" text="see more" isActive />

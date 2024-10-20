@@ -1,17 +1,25 @@
-import { useContext } from "react";
-import { SvContext } from "../Components/SeviceContext/SeviceContext";
-import ProductCart from "../Components/ProductCart";
-import ExtraBanner from "../Components/ExtraBanner/ExtraBanner";
+import PaymentProcess from "../Components/PaymentProcess/PaymentProcess";
 import Checkout from "../Components/Checkout/Checkout";
+import { SvContext } from "../Components/SeviceContext/SeviceContext";
+import { useContext } from "react";
+import ProductCart from "../Components/ProductCart";
+import { Button } from "@mui/material";
 
-const Cart = () => {
+const Payment = () => {
   const { Cart, wishlist } = useContext(SvContext);
-
   return (
-    <div className="container mx-auto lg:padding-primary my-5">
-      <ExtraBanner title={"YOUR BAG"} />
-      <div className="my-10 flex flex-row justify-between gap-28">
-        <div className="flex-1">
+    <div
+      className="container mx-auto py-5 lg:padding-primary bg-gray-100 flex flex-row justify-center "
+      // style={{ maxHeight: "calc(100vh)" }}
+    >
+      <div className="flex-1">
+        <PaymentProcess />
+      </div>
+      <div
+        className="mx-3 bg-white h-fit overflow-y-auto"
+        style={{ maxHeight: "calc(130vh)" }}
+      >
+        <div className="flex-1 text-xs flex flex-col gap-1 max-w-[400px] border-b-8 border-solid border-gray-100">
           {Array.from(new Set(Cart.map((item) => item.id))).map((id) => (
             <ProductCart
               key={id}
@@ -23,8 +31,9 @@ const Cart = () => {
             />
           ))}
         </div>
-        <div>
+        <div className="p-2 h-fit">
           <Checkout
+            isBg={true}
             count={Cart.reduce(
               (sum, item) => Number(sum) + Number(item.price),
               0
@@ -38,4 +47,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default Payment;

@@ -2,7 +2,7 @@ import { IoMdCart } from "react-icons/io";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-export default function CartIconNavBar({ isIcon = "", id = 0 }) {
+export default function CartIconNavBar({ isIcon, id }) {
   return (
     <div>
       <Link to={`/cart`}>
@@ -21,4 +21,9 @@ export default function CartIconNavBar({ isIcon = "", id = 0 }) {
 CartIconNavBar.propTypes = {
   id: PropTypes.number.isRequired,
   isIcon: PropTypes.bool.isRequired,
+};
+
+CartIconNavBar.defaultProps = {
+  id: 0,
+  isIcon: false,
 };
