@@ -17,7 +17,7 @@ const Payment = () => {
       </div>
       <div
         className="mx-3 bg-white h-fit overflow-y-auto"
-        style={{ maxHeight: "calc(130vh)" }}
+        style={{ maxHeight: "calc(120vh)" }}
       >
         <div className="flex-1 text-xs flex flex-col gap-1 max-w-[400px] border-b-8 border-solid border-gray-100">
           {Array.from(new Set(Cart.map((item) => item.id))).map((id) => (
