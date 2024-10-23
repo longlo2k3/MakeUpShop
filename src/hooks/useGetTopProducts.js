@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 import { PRODUCT_TAGS } from "../constants/tags";
 import { BRANDS } from "../constants/brands";
-const BASE_URL = "http://makeup-api.herokuapp.com/api/v1/products";
+const BASE_URL = "https://makeup-api.herokuapp.com/api/v1/products";
 
 const getRandomProductTag = () => {
   const randomTag = Math.floor(Math.random() * BRANDS.length);

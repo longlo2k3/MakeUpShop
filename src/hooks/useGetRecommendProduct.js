@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { PRODUCT_TAGS } from "../constants/tags";
 
-const BASE_URL = "http://makeup-api.herokuapp.com/api/v1/products";
+const BASE_URL = "https://makeup-api.herokuapp.com/api/v1/products";
 
 const getRandomProductTag = () => {
   return PRODUCT_TAGS[Math.floor(Math.random() * PRODUCT_TAGS.length)];
