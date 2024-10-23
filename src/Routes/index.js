@@ -8,7 +8,7 @@ import Payment from "../Pages/Payment";
 
 const publicRoutes = [
   {
-    path: "/",
+    path: "/MakeUpShop",
     component: Home,
   },
   {
