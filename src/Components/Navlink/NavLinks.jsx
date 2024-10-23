@@ -2,7 +2,7 @@ import { NavLink, useLocation } from "react-router-dom";
 
 const links = [
   {
-    path: "/MakeUpShop",
+    path: "/MakeUpShop/",
     name: "Home",
   },
   {
