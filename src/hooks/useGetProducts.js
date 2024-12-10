@@ -13,7 +13,7 @@ const useGetProducts = () => {
         cancelToken: source.token,
       })
       .then((res) => {
-        setProducts(res.data.slice(0, 100));
+        setProducts(res.data.slice(0, 30));
       });
 
     return () => {

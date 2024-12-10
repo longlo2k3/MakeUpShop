@@ -27,7 +27,8 @@ const useSortProduct = () => {
 
   useEffect(() => {
     if (brand === "All") {
-      setFilteredProducts(products);
+      const filtered = products.filter((product) => product);
+      setFilteredProducts(filtered);
     } else {
       const filtered = products.filter((product) => product.brand === brand);
       setFilteredProducts(filtered);
