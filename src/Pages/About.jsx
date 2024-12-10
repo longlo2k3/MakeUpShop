@@ -68,6 +68,7 @@ const About = () => {
             Ready to embrace your beauty journey?
           </h3>
           <ButtonLink isActive text="Shop Now" path="/MakeUpShop/" />
+          <ButtonLink isActive text="Contact Us" path="/ContactUs/" />
         </div>
       </div>
     </div>
